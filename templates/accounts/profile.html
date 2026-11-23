@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile - ChatFlow</title>
+</head>
+<body>
+
+    <h1>My Profile</h1>
+
+    <h3>{{ profile.user.username }}</h3>
+
+    {% if profile.avatar %}
+        <img src="{{ profile.avatar.url }}" width="150" alt="Profile Picture">
+    {% endif %}
+
+    <p>Bio: {{ profile.bio }}</p>
+
+    <p>Phone: {{ profile.phone }}</p>
+
+    <p>Last Seen: {{ profile.last_seen }}</p>
+
+    <a href="{% url 'profile_update' %}">Edit Profile</a>
+
+</body>
+</html>
